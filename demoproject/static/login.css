@@ -1,0 +1,62 @@
+.main{
+    text-align:center;
+    border:1px solid dodgerblue;
+    width:35%;
+    margin-left:35%;
+    margin-top:16%;
+    border-radius:13px;
+
+}
+
+input{
+    margin:10px;
+    padding:5px;
+}
+
+button{
+    margin:10px;
+    padding:5px;
+    background-color:dodgerblue;
+    width:20%;
+    color:white;
+    font-weight:bold;
+    border:1px solid dodgerblue;
+    border-radius:3px;
+}
+
+h1{
+    color:dodgerblue;
+}
+
+a{
+    color:dodgerblue;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+.messages {
+  color: red;
+  font-weight:bold;
+
+}
+
+.messages.error {
+  color: red;
+  font-weight:bold;
+}
+
+.message {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.message.error {
+    background-color: #ffdddd;
+    color: red;
+}
+
+.message.success {
+    background-color: #dff0d8;
+    color: green;
+}

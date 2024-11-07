@@ -1,0 +1,36 @@
+{% extends 'home1.html' %}
+{% load static %}
+{% block content %}
+
+
+    <link rel="stylesheet" type="text/css" href="{%  static 'registration.css' %}">
+<br>
+<form action="/registration/" method="POST">
+    <h1>Registration Form</h1>
+
+        {% csrf_token %}
+        <label for="">username</label>
+        <input type="text" id="username" name="txt_username" placeholder="enter your username"Required>
+        <br>
+        <label for="">password</label>
+        <input type="password" id="password1" name="txt_password1" placeholder="enter your password" Required>
+        <br>
+        <label>Confirm Password</label>
+        <input type="password" id="password2"  name="txt_password2" placeholder="Confirm Password">
+        <br>
+        <label>Email:</label>
+        <input type="email" id="email" required name="txt_email" placeholder="Enter your Email">
+        <br>
+        <label>first_name:</label>
+        <input type="fname" id="fname" name="txt_fname" placeholder="Enter your First Name">
+        <br>
+        <label>last_name:</label>
+        <input type="lname" id="lname" name="txt_lname" placeholder="Enter your Last Name">
+        <br>
+        <label>Phone:</label>
+        <input type="Phone" id="phone" required>
+        <br>
+        <button type="submit">signup</button>
+    </form>
+
+{% endblock %}

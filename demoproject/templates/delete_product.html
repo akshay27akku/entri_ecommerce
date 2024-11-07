@@ -1,0 +1,11 @@
+{% extends 'home1.html' %}
+{% load static %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<!--{{form.as_p}}-->
+    <P>Do you want to delete {{product.name}}</P>
+    <a href="{% url 'home2' %}" class="btn btn-danger">Cancel</a>
+    <input type="submit" value="Delete Product" class="btn btn-secondary">
+</form>
+{% endblock %}

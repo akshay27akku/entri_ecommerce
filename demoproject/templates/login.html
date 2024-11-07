@@ -1,0 +1,41 @@
+{% extends 'home1.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css'%}">
+
+
+    <div class="main">
+        <form action="/login/" method="post">
+
+            {% csrf_token %}
+            <h1>LOGIN</h1>
+            <div class="messages" id ="messages" name="messages">
+                {% if messages %}
+                 <div class="message-container">
+<!--                    <ul class="messages">-->
+                        {% for i in messages %}
+                            {% if messages.tags %}{% endif %}{{i}}
+                        {% endfor %}
+<!--                    </ul>-->
+                 </div>
+                {% endif %}
+            </div>
+
+
+
+            <label for="">username</label>
+            <input type="text" id="username" name="txt_username" autocomplete="off" placeholder="Enter username" Required>
+            <br>
+            <label for="">password</label>
+            <input type="password" id="password" name="txt_password1" autocomplete="off" placeholder="Enter your password" Required>
+            <br>
+            <button type="submit">LOGIN</button>
+            <br><br>
+<!--            Dont have an account?&nbsp;<a href="signup.php">Signup Here</a>-->
+        </form>
+    </div>
+
+{% endblock %}
